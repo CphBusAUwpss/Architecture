@@ -5,8 +5,10 @@
  */
 package model.dataaccess;
 
-import entity.User;
+import java.util.ArrayList;
+import logic.entity.User;
 import java.util.List;
+import logic.entity.Product;
 
 /**
  *
@@ -14,6 +16,7 @@ import java.util.List;
  */
 public class DataFacade implements IDataFacade{
     UserMapper um = new UserMapper();
+    ProductMapper pm = new ProductMapper();
     //KayakMapper km = new KayakMapper();
     //BookingMapper bm .....
     
@@ -27,15 +30,23 @@ public class DataFacade implements IDataFacade{
         return um.getUser(id);
     }
 
+
     @Override
     public void createUser(User user) {
         um.createUser(user);
     }
+    public void getSome(){}
+    
     public static void main(String[] args) {
         DataFacade df = new DataFacade();
         for (User user : df.getAllUsers()) {
             System.out.println(user.getName());
         }
+    }
+
+    @Override
+    public List<Product> getAllProducts() {
+       return pm.getAllProducts();
     }
     
 }

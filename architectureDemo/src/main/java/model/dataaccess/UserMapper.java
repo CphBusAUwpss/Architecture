@@ -1,6 +1,6 @@
 package model.dataaccess;
 
-import entity.User;
+import logic.entity.User;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -96,6 +96,10 @@ public class UserMapper {
     }
     public static void main(String[] args) {
         UserMapper um = new UserMapper();
-        um.createUser(new User("Peder", "peder123"));
+//        um.createUser(new User("Peder", "peder123"));
+//        um.getAllUsers().forEach((el)->{System.out.println(el);});
+           for(User user : um.getAllUsers()){
+              System.out.println("User: "+user.getName());
+           }
     }
 }

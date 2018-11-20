@@ -1,4 +1,5 @@
-use test;
+create database kayak;
+use kayak;
 
 drop table if exists image;
 drop table if exists booking;

@@ -5,18 +5,17 @@
  */
 package model.dataaccess;
 
-import logic.entity.User;
+import java.util.ArrayList;
 import java.util.List;
 import logic.entity.Product;
 
 /**
  *
- * @author tha
+ * @author thomas
  */
-public interface IDataFacade {
-    List<User> getAllUsers();
-    User getUser(int id);
-    void createUser(User user);
-    List<Product> getAllProducts();
-    
+public class ProductMapper {
+    List<Product> getAllProducts(){
+         List<Product> products = new ArrayList();
+        return products;
+    }
 }
